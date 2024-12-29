@@ -1,0 +1,25 @@
+def get_matrix(n, m, value):
+    # Если n или m <= 0, возвращаем пустой список
+    if n <= 0 or m <= 0:
+        return []
+    
+    # Инициализируем пустой список для матрицы
+    matrix = []
+    
+    # Внешний цикл для строк
+    for i in range(n):
+        row = []  # создаем пустую строку
+        # Внутренний цикл для столбцов
+        for j in range(m):
+            row.append(value)  # заполняем строку значением value
+        matrix.append(row)  # добавляем строку в матрицу
+    
+    return matrix
+
+# Пример использования
+result1 = get_matrix(2, 2, 10)
+result2 = get_matrix(3, 5, 42)
+result3 = get_matrix(4, 2, 13)
+print(result1)
+print(result2)
+print(result3)
